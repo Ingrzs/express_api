@@ -18,6 +18,15 @@ app.get('/v1/explorers', (req,res) => {
 })
 
 
+app.get('/v1/explorers/:id', (req,res) => {
+    console.log(`api explores ${new Date()}`)
+    console.log(`get parametro id ${req.params.id}`)
+    const explorer = {id:1, name:"rami1"}
+    res.status(200).json(explorer)
+
+})
+
+
 app.listen(port,()=>{
     console.log(`iniciando app on port ${port}`)
 })
