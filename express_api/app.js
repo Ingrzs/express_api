@@ -34,6 +34,15 @@ app.post('/v1/explorers', (req,res) => {
 })
 
 
+app.put('/v1/explorers/:id', (req,res) => {
+    console.log(`api explores con put ${new Date()}`)
+    console.log(`update parametro id ${req.params.id}`)
+    const requestBody = req.body
+    res.status(200).json({message:"updated"})
+
+})
+
+
 app.listen(port,()=>{
     console.log(`iniciando app on port ${port}`)
 })
